@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/master.css" />
+    <script src="https://kit.fontawesome.com/c2cee199ac.js" crossorigin="anonymous"></script>
+    <title>Assignment 1 - 3420</title>
+</head>
+<body>
+    <section id="parta">
+        <h1>Part A - Building and Styling a List</h1>
+        <h1>CBCF History</h1>
+        <p>
+            Established in 1986 by a dedicated group of volounteers, <em><strong> Canadian Breast Cancer Foundation</strong></em> worked collaboratively to fund, support, and advocate for:
+        </p>
+        <ul>
+            <li>Relevant and innovative research</li>
+            <li>Meaningful education and awareness programs</li>
+            <li>Early diagnosis and effective treatment</li>
+            <li>A positive quality of life for those living with breast cancer</li> 
+        </ul>
+        <p>In 2019 the <abbr title="Canadian Breast Cancer Foundation">CBCF</abbr> merged with the Canadian Cancer Society. More information can be found at <a href="https://www.cancer.ca">cancer.ca</a></p>
+    </section>
+
+    <section id="partb">
+        <h1>Part B - Building & Styling Tables</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Smart Starter</th>
+                    <th>Smart Medium</th>
+                    <th>Smart Business</th>
+                    <th>Smart Deluxe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Storage Space</th>
+                    <td>1 GB</td>
+                    <td>100 GB</td>
+                    <td>1 TB</td>
+                    <td>Unlimted</td>
+                </tr>
+                <tr>
+                    <th>Bandwidth</th>
+                    <td>50 GB</td>
+                    <td>100 GB</td>
+                    <td>150 GB</td>
+                    <td>Unlimted</td>
+                </tr>
+                <tr>
+                    <th>MySQL Databases</th>
+                    <td>Unlimted</td>
+                    <td>Unlimted</td>
+                    <td>Unlimted</td>
+                    <td>Unlimted</td>
+                </tr>
+                <tr>
+                    <th>Setup</th>
+                    <td>$19.90</td>
+                    <td>$12.90</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <th>PHP7</th>
+                    <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
+                    <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
+                    <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
+                    <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
+                </tr>
+                <tr>
+                    <th>Ruby on Rails</th>
+                    <td><i aria-hidden="true" class="fas fa-times"><span class="sr-only">no</span></i></td>
+                    <td><i aria-hidden="true" class="fas fa-times"><span class="sr-only">no</span></i></td>
+                    <td><i aria-hidden="true" class="fas fa-check"><span class="sr-only">yes</span></i></td>
+                    <td><i aria-hidden="true" class="fas fa-check"><span class="sr-only">yes</span></i></td>
+                </tr>
+                <tr>
+                    <th>Price Per Month</th>
+                    <td>$2.90</td>
+                    <td>$5.90</td>
+                    <td>$9.90</td>
+                    <td>$14.90</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="partc">
+        <h1>Part C - Flexbox Navigation</h1>
+        <i aria-hidden="true" class="fas fa-quidditch"></i>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Services</a></li>
+        </ul>
+        <form id="search" name="search">
+            <i aria-hidden="true" class="fas fa-search"></i>
+            <input type='text' name="search" id="search">
+            <input type="submit" value="Go">
+        </form>
+    </section>
+    <section id="partd">
+        <h1>Part D - Building a Checkout Forum</h1>
+        <div>
+            <h2>Checkout</h2>
+            <form id="checkout">
+                <fieldset>
+                    <legend>Contact</legend>
+                    <label for="emailaddress">Email Address:</label>
+                    <input id="emailaddress" name="emailaddress" type="email" placeholder="email@email.com"/>
+                </fieldset>
+                <fieldset>
+                    <legend>Payment</legend>
+                    <div>
+                        <label for="CardNumber">Credit Card:</label>
+                        <input id="CardNumber" name="CardNumber" type="text" placeholder="0000-0000-0000-0000" maxlength="19"/>
+                    </div>
+                    
+                    <div>
+                        <label for="SecCode">Credit Card:</label>
+                        <input id="SecCode" name="SecCode" type="text" placeholder="000" maxlength="3"/>
+                    </div>
+                    <div>
+                        <legend>Expiry</legend>
+                        <label for="Month">Month:</label>
+                        <select name="Month" id="Month">
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <label for="Year">Year:</label>
+                        <select name="Year" id="Year">
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="CardName">Email Address:</label>
+                        <input id="CardName" name="CardName" type="text" placeholder="John Doe"/>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Shipping Info</legend>
+                    <div>
+                        <label for="Pickup">Pickup</label>
+                        <input type="radio" name="Shipping" id="Pickup" value="Pickup"/>
+                    </div>
+                    <div>
+                        <label for="nice">Ship</label>
+                        <input type="radio" name="Shipping" id="Ship" value="Ship"/>
+                    </div>
+                </fieldset>
+                <div>
+                    <button id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h2>Your Cart</h2>
+            <ul>
+                <li>
+                    <span class='qty'></span>
+                    <span class='producttitle'>Red Chic Umbrella</span>
+                    <div class='price'>
+                        <img src='images\30,000_Bells_NH_Inv_Icon.png' alt=''/>
+                        <span>405</span>
+                    </div>
+                    <img src='images\products\Red_Chic_Umbrella_NH_Icon.png' alt=''/>
+                </li>
+
+                <li>
+                    <span class='qty'></span>
+                    <span class='producttitle'>Dot Parasol</span>
+                    <div class='price'>
+                        <img src='images\30,000_Bells_NH_Inv_Icon.png' alt=''/>
+                        <span>187</span>
+                    </div>
+                    <img src='images\products\Blue_Dot_Parasol_NH_Icon.png' alt=''/>
+                </li>
+                <li>
+                    <span class='qty'>2</span>
+                    <span class='producttitle'>Busted Umbrella</span>
+                    <div class='price'>
+                        <img src='images\30,000_Bells_NH_Inv_Icon.png' alt=''/>
+                        <span>187</span>
+                    </div>
+                    <img src='images\products\Busted_Umbrella_NH_Icon.png' alt=''/>
+                </li>
+            </ul>
+            <div class='total'>
+                <span>Total:</span>
+                <img src='images\30,000_Bells_NH_Inv_Icon.png' alt=''/>
+                <span>$32.50</span>
+            </div>
+        </div>
+    </section>
+    <section id="parte">
+        <h1>Part E - About Me</h1>
+        <div>
+            <img src='images\me.jpg' alt='A picture of me' />
+            <h2>Bill Van Leeuwen</h2>
+            <h3>Trent University Computer Science Student</h3>
+            <ul>
+                <li><a href='https://github.com/billvanleeuwen424'>GitHub</a></li>
+                <li><a href='https://www.linkedin.com/in/bill-van-leeuwen-536358156/'>Linkedin</a></li>
+                <li><a href='mailto:billvanleeuwen424@gmail.com'>Email</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
