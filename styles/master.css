@@ -1,5 +1,9 @@
-/*@import "reset.css";*/
+@import "reset.css";
 
+
+h1 {
+    size: 100px;
+}
 /*change visibility of accessibility text*/
 .sr-only {
     visibility: hidden;
