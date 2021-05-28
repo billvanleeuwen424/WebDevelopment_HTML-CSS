@@ -1,1 +1,6 @@
-/*@import "reset.css";
+/*@import "reset.css";*/
+
+/*change visibility of accessibility text*/
+.sr-only {
+    visibility: hidden;
+}
