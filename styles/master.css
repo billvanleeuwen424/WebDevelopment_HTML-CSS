@@ -68,6 +68,34 @@ section#parta a:visited {
 /********************************/
 
 /*Part B*******************************/
+section#partb table,tr,td,th {
+    border: solid white;
+    color: white;
+}
+section#partb thead {
+    background-color: #51344d;
+}
+section#partb tr th,.price{
+    background-color: #755c75;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+section#partb .price {
+    background-color: #8c93a8;
+    border: solid white;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+ 
+tr.s1 td {
+    background-color: #d0c3d0;
+}
+tr.s2 td {
+    background-color: #aa98aa;
+}
 
-
+th.empty {
+    background-color: white;
+}
 
