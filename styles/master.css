@@ -112,4 +112,25 @@ section#partb tr.price {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+/********************************/
 
+/***Part C****/
+
+section#partc > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section#partc div > div {
+    display: flex;
+    flex-direction: row;
+}
+
+section#partc div > ul{
+    display: flex;
+    flex-direction: row;
+}
+
+section#partc input#search {
+    
+}
