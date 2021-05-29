@@ -2,7 +2,7 @@
 
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 
 
@@ -33,7 +33,7 @@ abbr {
 /*Part A*******************************/
 /*text and headings*/
 section#parta{
-    font-family: 'Lora';
+    font-family: 'Lora', Arial, Helvetica, sans-serif;
 }
 section#parta .firstp::first-letter{
     font-size: 1.5em;
@@ -68,34 +68,48 @@ section#parta a:visited {
 /********************************/
 
 /*Part B*******************************/
-section#partb table,tr,td,th {
+section#partb{
+    font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+}
+section#partb table,tbody,tr,td,th {
     border: solid white;
     color: white;
+    padding:0.5em;
 }
-section#partb thead {
+section#partb tr.s1 td {
+    background-color: #d0c3d0;
+}
+section#partb tr.s2 td{
+    background-color: #aa98aa;
+}
+/*not working */
+/*only the colour is listening to me...*/
+section#partb thead tr {
     background-color: #51344d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
 }
-section#partb tr th,.price{
+
+section#partb th.empty {
+    background-color: white;
+}
+
+section#partb tbody tr.s1 th,tr.s2 th {
     background-color: #755c75;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-section#partb .price {
+section#partb i.fa-times {
+    color: red;
+}
+section#partb i.fa-check {
+    color: green;
+}
+/*not working */
+/*only the colour is listening to me...*/
+section#partb tr.price {
     background-color: #8c93a8;
-    border: solid white;
-    color: white;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-}
- 
-tr.s1 td {
-    background-color: #d0c3d0;
-}
-tr.s2 td {
-    background-color: #aa98aa;
-}
-
-th.empty {
-    background-color: white;
 }
 
