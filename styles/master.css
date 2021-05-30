@@ -197,12 +197,10 @@ section#partd > div {
     justify-content:space-around;
     margin: 1em 5em 1em 5em;
 }
+/*checkout side of flexbox*/
 section#partd div#checkout{
     flex: 6;
     padding: 1em;
-}
-section#partd div#cart{
-    flex: 1.2;
 }
 section#partd fieldset{
     padding: 0.5em;
@@ -210,16 +208,14 @@ section#partd fieldset{
     border: solid darkgrey;
     border-radius: 5px;
 }
-
-
 section#partd div.paymentinner {
     display: flex;
     flex-direction: column;
-    
 }
 section#partd div.paymentinner > div {
     padding:0.25em;
 }
+/*security code, expiry*/
 section#partd div.cardcode {
     display: flex;
     flex-direction: row;
@@ -237,30 +233,22 @@ section#partd fieldset.payment label {
 section#partd fieldset.contact label {
     padding: 0 0 0.25em 0;
 }
-/*
-section#partd fieldset.payment div.paymentinner > div{
+/*button*/
+section#partd div.button {
     display: flex;
-    flex-direction: column;
-    padding: 5em;
+    justify-content: right;
+    padding: 0 0.75em 0 0;
 }
-section#partd div.cardcode {
-    display: flex;
-    flex-direction: row;
+section#partd div.button button {
+    background-color: #0061d1;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em 1em 0.5em 1em;
 }
-section#partd div.cardcode {
-    display: flex;
-    flex-direction: column;
+section#partd div.button button:hover {
+    background-color:  #0041a1;
+    color: white;
 }
-
-section#partd div.checkout {
-    display: flex;
-    flex-direction: column;
-}
-*/
-
-
-
-
 /*shipping radio buttons*/
 section#partd div.shipbuttons > div{
     padding: 0.5em 0 0 0.5em;
@@ -271,9 +259,10 @@ section#partd div.email{
     display: flex;
     flex-direction: column;
 }
-
-
-
+/*cart side*/
+section#partd div#cart{
+    flex: 1.2;
+}
 section#partd div#cart {
     display: flex;
     flex-direction: column;
@@ -285,7 +274,6 @@ section#partd div#cart {
     background-color: rgb(238, 234, 234);
     padding-right: 3em;
 }
-
 section#partd li {
     display: flex;
     flex-direction: column;
@@ -298,27 +286,67 @@ section#partd img.moneysign{
 }
 section#partd img.product {
     width: 3em;
-    /*padding-left: 0.5em;*/
 }
-
 section#partd div.priceitem  {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 0.5em;
 }
-
 section#partd div.price {
     padding: 1.1em 0 0 0;
 }
-
 section#partd li {
     border-bottom: solid darkgrey;
     padding: 1em;
 }
-
 section#partd div.total {
     padding:1em;
     flex:1;
     justify-content: space-between;
+}
+/***********************************/
+
+/*******Part E*******/
+/* Inspiration from https://www.w3schools.com/howto/howto_css_cards.asp */
+
+/*for bill on monday, try this maybe??? https://www.w3schools.com/howto/howto_css_flip_card.asp */
+
+section#parte {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+section#parte i {
+    font-size:3em;
+}
+section#parte div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin:auto;
+    width: 30%;
+    padding:1em;
+    margin-bottom: 5em;
+}
+section#parte img{
+    margin:auto;
+    width: 75%;
+    padding: 1em;
+    border-radius: 30px;
+}
+section#parte ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+
+section#parte h2 {
+    margin: auto;
+    padding: 0.1em 0 0 0;
+}
+section#parte h3 {
+    margin: auto;
+    padding: 0.25em 0 0 0;
 }
