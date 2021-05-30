@@ -193,27 +193,132 @@ section#partd > div {
     display: flex;
     flex-direction: row;
     border: solid darkgrey;
+    border-radius: 5px;
+    justify-content:space-around;
+    margin: 1em 5em 1em 5em;
 }
-
+section#partd div#checkout{
+    flex: 6;
+    padding: 1em;
+}
+section#partd div#cart{
+    flex: 1.2;
+}
 section#partd fieldset{
+    padding: 0.5em;
+    margin: 0.5em;
     border: solid darkgrey;
     border-radius: 5px;
 }
 
-section#partd > div {
+
+section#partd div.paymentinner {
+    display: flex;
+    flex-direction: column;
+    
+}
+section#partd div.paymentinner > div {
+    padding:0.25em;
+}
+section#partd div.cardcode {
     display: flex;
     flex-direction: row;
 }
-section#partd div.checkout {
+section#partd div.cardname, div.cardnum, div.codemonthyear {
     display: flex;
+    flex-direction: column;
 }
-section#partd fieldset > div {
-    padding: 1em;
+section#partd div.codemonthyear {
+    width: 50%;
+}
+section#partd fieldset.payment label {
+    padding: 0 0 0.25em 0;
+}
+section#partd fieldset.contact label {
+    padding: 0 0 0.25em 0;
+}
+/*
+section#partd fieldset.payment div.paymentinner > div{
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+}
+section#partd div.cardcode {
+    display: flex;
+    flex-direction: row;
+}
+section#partd div.cardcode {
+    display: flex;
+    flex-direction: column;
 }
 
+section#partd div.checkout {
+    display: flex;
+    flex-direction: column;
+}
+*/
+
+
+
+
+/*shipping radio buttons*/
+section#partd div.shipbuttons > div{
+    padding: 0.5em 0 0 0.5em;
+}
+/*email address padding*/
+section#partd div.email{
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+section#partd div#cart {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: solid darkgrey;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    background-color: rgb(238, 234, 234);
+    padding-right: 3em;
+}
+
+section#partd li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5em 0 0.5em 0
+    
+}
 section#partd img.moneysign{
     width: 1em;
 }
-section#partd div#cart li > img{
-    width: 2em;
+section#partd img.product {
+    width: 3em;
+    /*padding-left: 0.5em;*/
+}
+
+section#partd div.priceitem  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.5em;
+}
+
+section#partd div.price {
+    padding: 1.1em 0 0 0;
+}
+
+section#partd li {
+    border-bottom: solid darkgrey;
+    padding: 1em;
+}
+
+section#partd div.total {
+    padding:1em;
+    flex:1;
+    justify-content: space-between;
 }
