@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 h1{
     font-size: 2em;
@@ -182,4 +182,38 @@ section#partc a {
 }
 section#partc a:visited {
     color: #ff6666;
+}
+/********************************/
+
+/*Part D*******************************/
+section#partd {
+    font-family: 'Arimo', Arial, Helvetica, sans-serif;
+}
+section#partd > div {
+    display: flex;
+    flex-direction: row;
+    border: solid darkgrey;
+}
+
+section#partd fieldset{
+    border: solid darkgrey;
+    border-radius: 5px;
+}
+
+section#partd > div {
+    display: flex;
+    flex-direction: row;
+}
+section#partd div.checkout {
+    display: flex;
+}
+section#partd fieldset > div {
+    padding: 1em;
+}
+
+section#partd img.moneysign{
+    width: 1em;
+}
+section#partd div#cart li > img{
+    width: 2em;
 }
