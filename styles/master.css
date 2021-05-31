@@ -9,6 +9,7 @@
 h1{
     font-size: 2em;
     font-weight: 700;
+    padding: 0.5em;
 }
 h2{
     font-size: 1.5em;
@@ -34,6 +35,7 @@ abbr {
 /*text and headings*/
 section#parta{
     font-family: 'Lora', Arial, Helvetica, sans-serif;
+    padding: 1em;
 }
 section#parta .firstp::first-letter{
     font-size: 1.5em;
@@ -67,37 +69,22 @@ section#parta a:visited {
 }
 /********************************/
 
+
+
 /*Part B*******************************/
 section#partb{
     font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+    padding: 1em;
 }
-section#partb table,tbody,tr,td,th {
+section#partb table, section#partb tbody, section#partb tr, section#partb td, section#partb th {
     border: solid white;
     color: white;
     padding:0.5em;
 }
-section#partb tr.s1 td {
-    background-color: #d0c3d0;
-}
-section#partb tr.s2 td{
-    background-color: #aa98aa;
-}
-/*not working */
-/*only the colour is listening to me...*/
-section#partb thead tr {
-    background-color: #51344d;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-}
 
-section#partb th.empty {
-    background-color: white;
-}
 
-section#partb tbody tr.s1 th,tr.s2 th {
-    background-color: #755c75;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+section#partb tbody tr td {
+    color: black;
 }
 section#partb i.fa-times {
     color: red;
@@ -105,18 +92,43 @@ section#partb i.fa-times {
 section#partb i.fa-check {
     color: green;
 }
-/*not working */
-/*only the colour is listening to me...*/
-section#partb tr.price {
-    background-color: #8c93a8;
+
+
+section#partb tr.s1 td {
+    background-color: #d0c3d0;
+}
+section#partb tr.s2 td{
+    background-color: #aa98aa;
+}
+section#partb thead tr.head th {
+    background-color: #51344d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+}
+section#partb tr.s1 th, section#partb tr.s2 th{
+    background-color: #755c75;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-/********************************/
+section#partb thead tr.head th.empty {
+    background-color: white;
+}
+section#partb tr.price  {
+    background-color: #8c93a8;
+}
+section#partb tbody tr.price td {
+    color: white;
+}
+section#partb table tbody tr.price th.bottomleft {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+/*************************************/
 
-/***Part C****/
+/*********************Part C**************************/
 section#partc{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    padding: 1em;
 }
 
 section#partc > div {
@@ -161,7 +173,12 @@ section#partc input#search {
     padding:0.5em;
     padding-right:7em;
 }
-
+section#partc input#submit {
+    border:none;
+    border-radius: 1em;
+    padding: 0 1em 0 1em;
+    color: rebeccapurple;
+}
 section#partc i {
     color: white;
 }
@@ -188,6 +205,7 @@ section#partc a:visited {
 /*Part D*******************************/
 section#partd {
     font-family: 'Arimo', Arial, Helvetica, sans-serif;
+    padding: 1em;
 }
 section#partd > div {
     display: flex;
@@ -199,12 +217,13 @@ section#partd > div {
 }
 /*checkout side of flexbox*/
 section#partd div#checkout{
-    flex: 6;
+    flex: 5;
     padding: 1em;
 }
+/*all fieldset boxes*/
 section#partd fieldset{
     padding: 0.5em;
-    margin: 0.5em;
+    margin: 1em 0.5em 1em 0.5em;
     border: solid darkgrey;
     border-radius: 5px;
 }
@@ -213,12 +232,13 @@ section#partd div.paymentinner {
     flex-direction: column;
 }
 section#partd div.paymentinner > div {
-    padding:0.25em;
+    padding:0.5em;
 }
 /*security code, expiry*/
 section#partd div.cardcode {
     display: flex;
     flex-direction: row;
+    white-space: nowrap;
 }
 section#partd div.cardname, div.cardnum, div.codemonthyear {
     display: flex;
@@ -304,6 +324,10 @@ section#partd div.total {
     padding:1em;
     flex:1;
     justify-content: space-between;
+}
+/*text for the cart items*/
+section#partd #cart  ul  li  div span {
+    white-space: nowrap;
 }
 /***********************************/
 
