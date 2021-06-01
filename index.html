@@ -29,7 +29,7 @@
         <h1>Part B - Building & Styling Tables</h1>
         <table>
             <thead>
-                <tr class='head'>
+                <tr>
                     <th class='empty'></th>
                     <th>Smart Starter</th>
                     <th>Smart Medium</th>
@@ -38,50 +38,50 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="s1">
+                <tr>
                     <th>Storage Space</th>
                     <td>1 GB</td>
                     <td>100 GB</td>
                     <td>1 TB</td>
                     <td>Unlimted</td>
                 </tr>
-                <tr class="s2">
+                <tr>
                     <th>Bandwidth</th>
                     <td>50 GB</td>
                     <td>100 GB</td>
                     <td>150 GB</td>
                     <td>Unlimted</td>
                 </tr>
-                <tr class="s1">
+                <tr>
                     <th>MySQL Databases</th>
                     <td>Unlimted</td>
                     <td>Unlimted</td>
                     <td>Unlimted</td>
                     <td>Unlimted</td>
                 </tr>
-                <tr class="s2">
+                <tr>
                     <th>Setup</th>
                     <td>$19.90</td>
                     <td>$12.90</td>
                     <td>Free</td>
                     <td>Free</td>
                 </tr>
-                <tr class="s1">
+                <tr>
                     <th>PHP7</th>
                     <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
                     <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
                     <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
                     <td><i aria-hidden="true" class="fas fa-check"></i><span class="sr-only">yes</span></td>
                 </tr>
-                <tr class="s2">
+                <tr>
                     <th>Ruby on Rails</th>
                     <td><i aria-hidden="true" class="fas fa-times"><span class="sr-only">no</span></i></td>
                     <td><i aria-hidden="true" class="fas fa-times"><span class="sr-only">no</span></i></td>
                     <td><i aria-hidden="true" class="fas fa-check"><span class="sr-only">yes</span></i></td>
                     <td><i aria-hidden="true" class="fas fa-check"><span class="sr-only">yes</span></i></td>
                 </tr>
-                <tr class="price">
-                    <th class='bottomleft'>Price Per Month</th>
+                <tr>
+                    <th>Price Per Month</th>
                     <td>$2.90</td>
                     <td>$5.90</td>
                     <td>$9.90</td>
@@ -131,11 +131,11 @@
                                 <input id="CardNumber" name="CardNumber" type="text" placeholder="0000-0000-0000-0000" maxlength="19"/>
                             </div>
                             <div class='cardcode'>
-                                <div class='codemonthyear'>
+                                <div>
                                     <label for="SecCode">Security Code</label>
                                     <input class="security" size="4" id="SecCode" name="SecCode" type="text" placeholder="000" maxlength="3"  />
                                 </div>
-                                <div class='codemonthyear'>
+                                <div>
                                     <label for="Month">Exp Month:</label>
                                     <select name="Month" id="Month">
                                         <option value="1">01</option>
@@ -152,7 +152,7 @@
                                         <option value="12">12</option>
                                     </select>
                                 </div>
-                                <div class='codemonthyear'>
+                                <div>
                                     <label for="Year">Exp Year:</label>
                                     <select name="Year" id="Year">
                                         <option value="2021">2021</option>
@@ -187,7 +187,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <div class='button'>
+                    <div>
                         <button id="submitbutton">Submit</button>
                     </div>
                 </form>
@@ -244,15 +244,35 @@
     <section id="parte">
         <h1>Part E - About Me</h1>
         <div>
-            <img src='images/me.jpg' alt='A picture of me' />
-            <h2>Bill Van Leeuwen</h2>
-            <h3>Trent University Computer Science Student</h3>
-            <ul>
-                <li><a href='https://github.com/billvanleeuwen424'><i class="fab fa-github-square"></i></a><span class="sr-only">GitHub</span></li>
-                <li><a href='https://www.linkedin.com/in/bill-van-leeuwen-536358156/'><i class="fab fa-linkedin"></i><span class="sr-only">Linkedin</span></a></li>
-                <li><a href='mailto:billvanleeuwen424@gmail.com'><i class="fas fa-envelope-square"></i><span class="sr-only">Email Address</span></a></li>
-            </ul>
-        </div>
+            <div>
+                <h2>I Like:</h2>
+                <ul>
+                    <li><i class="far fa-hand-point-right"></i> Star Wars</li>
+                    <li><i class="far fa-hand-point-right"></i> Nature</li>
+                    <li><i class="far fa-hand-point-right"></i> My Dog Goose</li>
+                </ul>
+                <img src='images/empire.jpg' alt='empire strikes back poster' />
+            </div>
+            <div>
+                <img src='images/me.jpg' alt='A picture of me' />
+                <h2>Bill Van Leeuwen</h2>
+                <h3>Trent University Computer Science Student</h3>
+                <ul>
+                    <li><a href='https://github.com/billvanleeuwen424'><i class="fab fa-github-square"></i></a><span class="sr-only">GitHub</span></li>
+                    <li><a href='https://www.linkedin.com/in/bill-van-leeuwen-536358156/'><i class="fab fa-linkedin"></i><span class="sr-only">Linkedin</span></a></li>
+                    <li><a href='mailto:billvanleeuwen424@gmail.com'><i class="fas fa-envelope-square"></i><span class="sr-only">Email Address</span></a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Work I do:</h2>
+                <ul>
+                    <li><i class="far fa-hand-point-right"></i> C#</li>
+                    <li><i class="far fa-hand-point-right"></i> HTML and CSS</li>
+                    <li><i class="far fa-hand-point-right"></i> Python</li>
+                </ul>
+                <img src='images/python.jpg' alt='A picture of me' />
+            </div>
+        
     </section>
 </body>
 </html>

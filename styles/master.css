@@ -76,53 +76,60 @@ section#partb{
     font-family: 'Poiret One', Arial, Helvetica, sans-serif;
     padding: 1em;
 }
-section#partb table, section#partb tbody, section#partb tr, section#partb td, section#partb th {
+/*all sections of the table
+borders, padding, alignment*/
+section#partb tr, 
+section#partb td, 
+section#partb th {
     border: solid white;
     color: white;
     padding:0.5em;
     text-align: center;
 }
+/*specific font styling*/
 section#partb th {
     font-weight: bold;
 }
 section#partb tbody tr td {
     color: black;
 }
+/*check and x marks*/
 section#partb i.fa-times {
     color: red;
 }
 section#partb i.fa-check {
     color: green;
-    
-}
-section#partb tr.s1 td {
+}/*background colours and edge rounding, every other row*/
+section#partb tbody tr:first-child td, 
+section#partb tbody tr:nth-child(3) td,
+section#partb tbody tr:nth-child(5) td {
     background-color: #d0c3d0;
 }
-section#partb tr.s2 td{
+section#partb tbody tr:nth-child(2) td, 
+section#partb tbody tr:nth-child(4) td,
+section#partb tbody tr:nth-child(6) td {
     background-color: #aa98aa;
 }
-section#partb thead tr.head th {
+/*top edge*/
+section#partb thead tr th {
     background-color: #51344d;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; 
 }
-section#partb tr.s1 th, section#partb tr.s2 th{
+/*left edge*/
+section#partb tbody tr > th {
     background-color: #755c75;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-section#partb thead tr.head th.empty {
+/*empty top right corner cell*/
+section#partb thead tr th:first-child {
     background-color: white;
 }
-section#partb tr.price  {
+/*bottom row*/
+section#partb tbody tr:nth-child(7) *  {
     background-color: #8c93a8;
-}
-section#partb tbody tr.price td {
     color: white;
-}
-section#partb table tbody tr.price th.bottomleft {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 /*************************************/
 
@@ -167,17 +174,18 @@ section#partc form{
     flex-direction: row;
 }
 
-section#partc input#search {
+html body section#partc div div form input:nth-child(2) {
     background-color:#2ec4b6;
     border:none;
     border-radius: 5px;
     padding:0.5em;
     padding-right:7em;
 }
-section#partc input#submit {
+html body section#partc div div form input:nth-child(3) {
     border:none;
     border-radius: 1em;
     padding: 0 1em 0 1em;
+    background-color: lightgrey;
     color: rebeccapurple;
 }
 section#partc i {
@@ -219,7 +227,8 @@ section#partd > div {
     min-width: 35em;
 }
 /*checkout side of flexbox*/
-section#partd div#checkout{
+/*#checkout*/
+section#partd > div > div:first-child{
     flex: 5;
     padding: 1em;
 }
@@ -230,63 +239,72 @@ section#partd fieldset{
     border: solid darkgrey;
     border-radius: 5px;
 }
-section#partd div.paymentinner {
+/*all label padding*/
+section#partd form fieldset label {
+    padding: 0 0 0.25em 0;
+}
+/*email address*/
+section#partd form fieldset:first-child > div{
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
 }
-section#partd div.paymentinner > div {
+/*email specific label padding*/
+section#partd form fieldset > div:first-child label {
+    padding: 0 0 0.25em 0;
+}
+/*payment section*/
+/*.paymentinner*/
+section#partd form fieldset:nth-child(2) > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+section#partd form fieldset:nth-child(2) > div:nth-child(2) > div {
     padding:0.5em;
 }
 /*security code, expiry*/
-section#partd div.cardcode {
+/*cardcode*/
+section#partd form fieldset:nth-child(2) > div:nth-child(2) > div:nth-child(2){
     display: flex;
     flex-direction: row;
     white-space: nowrap;
 }
-section#partd div.cardname, div.cardnum, div.codemonthyear {
+/*put the elements inside payment into a flex container*/
+section#partd form fieldset:nth-child(2) > div:nth-child(2) > div:first-child,
+section#partd form fieldset:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div,
+section#partd form fieldset:nth-child(2) > div:nth-child(2) > div:nth-child(3){
     display: flex;
     flex-direction: column;
 }
-section#partd div.codemonthyear {
+/*seccode,expiry*/
+section#partd form fieldset:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div {
     width: 50%;
 }
-section#partd fieldset.payment label {
-    padding: 0 0 0.25em 0;
-}
-section#partd fieldset.contact label {
-    padding: 0 0 0.25em 0;
+/*shipping radio buttons*/
+section#partd form fieldset:nth-child(3) > div > div{
+    padding: 0.5em 0 0.5em 0.5em;
 }
 /*button*/
-section#partd div.button {
+section#partd form > div:nth-child(4) {
     display: flex;
     justify-content: right;
     padding: 0 0.75em 0 0;
 }
-section#partd div.button button {
+section#partd form > div:nth-child(4) button {
     background-color: #0061d1;
     color: white;
     border-radius: 5px;
     padding: 0.5em 1em 0.5em 1em;
 }
-section#partd div.button button:hover {
+section#partd form > div:nth-child(4) button:hover {
     background-color:  #0041a1;
     color: white;
 }
-/*shipping radio buttons*/
-section#partd div.shipbuttons > div{
-    padding: 0.5em 0 0 0.5em;
-}
-/*email address padding*/
-section#partd div.email{
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-}
+
 /*cart side*/
-section#partd div#cart{
+/*whole cart*/
+section#partd > div > div:nth-child(2){
     flex: 1.2;
-}
-section#partd div#cart {
     display: flex;
     flex-direction: column;
     padding: 1em;
@@ -297,48 +315,51 @@ section#partd div#cart {
     background-color: rgb(238, 234, 234);
     padding-right: 3em;
 }
-section#partd li {
+/*each item of list, holds title, cost, image*/
+section#partd > div > div:nth-child(2) li {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0.5em 0 0.5em 0
+    padding: 1em 0 1em 0;
+    border-bottom: solid darkgrey;
+    padding: 1em;
     
 }
+/*image sizing*/
 section#partd img.moneysign{
     width: 1em;
 }
 section#partd img.product {
-    width: 3em;
+    width: 3.5em;
 }
-section#partd div.priceitem  {
+/*price and item*/
+section#partd > div > div:nth-child(2) li > div:nth-child(2)  {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 0.5em;
 }
-section#partd div.price {
+section#partd > div > div:nth-child(2) li > div:nth-child(2) >div:first-child {
     padding: 1.1em 0 0 0;
 }
-section#partd li {
-    border-bottom: solid darkgrey;
-    padding: 1em;
-}
-section#partd div.total {
+section#partd > div > div:nth-child(2) > div {
     padding:1em;
     flex:1;
     justify-content: space-between;
 }
 /*text for the cart items*/
-section#partd #cart  ul  li  div span {
+section#partd > div > div:nth-child(2) ul  li  div span {
     font-style: italic;
     white-space: nowrap;
 }
-section#partd #cart  ul  li  div.prodtitleandqty {
+/*quantity and title*/
+section#partd > div > div:nth-child(2)  ul  li > div:first-child {
     display: flex;
     flex-direction: row-reverse; 
-    justify-content: space-evenly;
+    justify-content: left;
 }
-section#partd #cart  ul  li  div span.qty {
+/*qty styling*/
+section#partd > div > div:nth-child(2)  ul  li > div:first-child span.qty{
     padding:0 0.25em 0 0.25em;
     position: relative;
     bottom: 0.5em;
@@ -352,15 +373,11 @@ section#partd #cart  ul  li  div span.qty {
 /***********************************/
 
 /*******Part E*******/
-/* Inspiration from https://www.w3schools.com/howto/howto_css_cards.asp */
 
-/*for bill on monday, try this maybe??? https://www.w3schools.com/howto/howto_css_flip_card.asp */
+
 
 section#parte {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-section#parte i {
-    font-size:3em;
 }
 
 /*inspiration from: https://css-tricks.com/making-css-animations-feel-natural/*/
@@ -374,9 +391,30 @@ section#parte i {
     100% {
         transform: translateX(0);
     }
-  }
+}
+/*inspiration from: https://www.tutorialspoint.com/css/css_animation_fade_in.htm*/
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ } 
 
-section#parte div{
+section#parte> div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+/*personal card*/
+/* Inspiration from https://www.w3schools.com/howto/howto_css_cards.asp */
+section#parte> div > div:nth-child(2){
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -390,32 +428,67 @@ section#parte div{
     animation-duration: 5s;
     animation-name: slidein;
     animation-timing-function: cubic-bezier(0.3, 2, 0.75, 1.3);
+
 }
-section#parte img{
+section#parte> div > div:nth-child(2) img{
     margin:auto;
     width: 75%;
     padding: 1em;
     border-radius: 30px;
 }
-section#parte ul {
+section#parte> div > div:nth-child(2) ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 1em;
 }
-
-section#parte h2 {
+section#parte> div > div:nth-child(2) h2 {
     margin: auto;
     padding: 0.1em 0 0 0;
 }
-section#parte h3 {
+section#parte> div > div:nth-child(2) h3 {
     margin: auto;
     padding: 0.25em 0 0 0;
 }
-
-section#parte a{
+section#parte> div > div:nth-child(2) i {
+    font-size:3em;
+}
+section#parte> div > div:nth-child(2) a{
     color: blue;
 }
-section#parte a:visited{
+section#parte > div > div:nth-child(2) a:visited{
     color: darkblue;
+}
+
+
+/*side lists*/
+section#parte > div > div:nth-child(3),
+section#parte > div > div:first-child {
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 20%;
+    padding: 1em;
+    margin-bottom: 5em;
+    align-items: center;
+    min-width: 13em;
+
+    animation-duration: 10s;
+    animation-name: fadein;
+}
+section#parte > div > div:nth-child(3) h2,
+section#parte > div > div:first-child h2 {
+    padding-left: 1em;
+}
+section#parte > div > div:nth-child(3) ul,
+section#parte > div > div:first-child ul{
+    padding: 0.75em 0 1em 3em;
+}
+section#parte > div > div:nth-child(3) li,
+section#parte > div > div:first-child li{
+    padding: 0.5em 0 .5em 0;
+}
+section#parte > div > div:nth-child(3) img,
+section#parte > div > div:first-child img{
+    width: 10em;
+    margin-left:2em;
 }
