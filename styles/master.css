@@ -80,9 +80,11 @@ section#partb table, section#partb tbody, section#partb tr, section#partb td, se
     border: solid white;
     color: white;
     padding:0.5em;
+    text-align: center;
 }
-
-
+section#partb th {
+    font-weight: bold;
+}
 section#partb tbody tr td {
     color: black;
 }
@@ -91,9 +93,8 @@ section#partb i.fa-times {
 }
 section#partb i.fa-check {
     color: green;
+    
 }
-
-
 section#partb tr.s1 td {
     background-color: #d0c3d0;
 }
@@ -207,6 +208,7 @@ section#partd {
     font-family: 'Arimo', Arial, Helvetica, sans-serif;
     padding: 1em;
 }
+/*entire box flexbox*/
 section#partd > div {
     display: flex;
     flex-direction: row;
@@ -214,6 +216,7 @@ section#partd > div {
     border-radius: 5px;
     justify-content:space-around;
     margin: 1em 5em 1em 5em;
+    min-width: 35em;
 }
 /*checkout side of flexbox*/
 section#partd div#checkout{
@@ -327,7 +330,24 @@ section#partd div.total {
 }
 /*text for the cart items*/
 section#partd #cart  ul  li  div span {
+    font-style: italic;
     white-space: nowrap;
+}
+section#partd #cart  ul  li  div.prodtitleandqty {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-evenly;
+}
+section#partd #cart  ul  li  div span.qty {
+    padding:0 0.25em 0 0.25em;
+    position: relative;
+    bottom: 0.5em;
+    left: 0.3em;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    color: white;
+    background-color: black;
+    border: solid darkgrey;
+    border-radius: 200px;
 }
 /***********************************/
 
@@ -342,16 +362,34 @@ section#parte {
 section#parte i {
     font-size:3em;
 }
+
+/*inspiration from: https://css-tricks.com/making-css-animations-feel-natural/*/
+@keyframes slidein {
+    0% {
+        transform: scale(1,1) translateX(1000px);
+    }
+    50% {
+        transform: scale(1.1,0.9) translateX(-150px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
 section#parte div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
     border-radius: 10px;
-    margin:auto;
     width: 30%;
-    padding:1em;
+    padding: 1em;
+    margin: auto;
     margin-bottom: 5em;
+    
+    animation-duration: 5s;
+    animation-name: slidein;
+    animation-timing-function: cubic-bezier(0.3, 2, 0.75, 1.3);
 }
 section#parte img{
     margin:auto;
@@ -373,4 +411,11 @@ section#parte h2 {
 section#parte h3 {
     margin: auto;
     padding: 0.25em 0 0 0;
+}
+
+section#parte a{
+    color: blue;
+}
+section#parte a:visited{
+    color: darkblue;
 }
