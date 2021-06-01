@@ -70,7 +70,6 @@ section#parta a:visited {
 /********************************/
 
 
-
 /*Part B*******************************/
 section#partb{
     font-family: 'Poiret One', Arial, Helvetica, sans-serif;
@@ -204,10 +203,12 @@ section#partc i[class='fas fa-search'] {
 section#partc a {
     color: #ccff66;
     text-decoration: none;
-    
 }
 section#partc a:visited {
     color: #ff6666;
+}
+section#partc a:hover {
+    color: white;
 }
 /********************************/
 
@@ -238,6 +239,9 @@ section#partd fieldset{
     margin: 1em 0.5em 1em 0.5em;
     border: solid darkgrey;
     border-radius: 5px;
+}
+section#partd fieldset > legend{
+    font-weight: bold;
 }
 /*all label padding*/
 section#partd form fieldset label {
@@ -351,6 +355,7 @@ section#partd > div > div:nth-child(2) > div {
 section#partd > div > div:nth-child(2) ul  li  div span {
     font-style: italic;
     white-space: nowrap;
+    font-size: small;
 }
 /*quantity and title*/
 section#partd > div > div:nth-child(2)  ul  li > div:first-child {
@@ -373,11 +378,14 @@ section#partd > div > div:nth-child(2)  ul  li > div:first-child span.qty{
 /***********************************/
 
 /*******Part E*******/
-
-
-
 section#parte {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+section#parte h3 {
+    margin: 1em;
+    margin-left: 2em;
+    font-style: italic;
+    font-size: small;
 }
 
 /*inspiration from: https://css-tricks.com/making-css-animations-feel-natural/*/
